@@ -68,25 +68,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [{ rel: "stylesheet", href: appCss }],
   }),
-  shellComponent: RootShell,
+  // shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
 
 function RootShell({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="id">
-      <head>
-        <HeadContent />
-        <link rel="icon" href="/favicon.ico.png?v=2" />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
+  return <>{children}</>;
 }
 
 function NavLink({
